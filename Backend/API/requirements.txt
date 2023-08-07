@@ -1,0 +1,5 @@
+fastapi==0.100.1
+python-dotenv==1.0.0
+SQLAlchemy==2.0.19
+uvicorn
+psycopg2-binary
