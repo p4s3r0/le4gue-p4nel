@@ -14,9 +14,17 @@ watcher = LolWatcher(api_key)
 
 # -----------------------------------------------------------------------------
 def addPlayer(name):
+    print("trying to add")
     summoner = watcher.summoner.by_name("euw1", name)
+    print("after summoner")
+    print("summoner basic", name, summoner["profileIconId"])
+
     setSummonerBasic(name, profileIconId=summoner["profileIconId"], level=summoner["summonerLevel"])
+    print("summoner dev", name, summoner["accountId"], summoner["id"], summoner["puuid"])
+
     setSummonerDev(name, accountId=summoner["accountId"], id=summoner["id"], puuid=summoner["puuid"])
+
+    print("after adding")
 
 
 
@@ -96,7 +104,6 @@ def calcRankedPlace(new_rank):
 def main():
     while True:
         summoners = getSummoners()
-        print(summoners)
 
         for p in summoners:
             print(f"[{datetime.today()}]  - Adding Player {p}")

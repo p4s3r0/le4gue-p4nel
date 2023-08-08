@@ -186,7 +186,7 @@ div {
 #badge p {
     color: black;
     background-color: transparent;
-    transform: translateY(-55%);
+    transform: translateY(-70%);
 }
 .border {
     padding: 1px;
@@ -211,11 +211,11 @@ div {
           animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .border::after {
@@ -236,11 +236,11 @@ div {
           animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 
@@ -586,6 +586,9 @@ div {
 .badgeDIAMOND {
     background-color: rgb(77, 111, 223);
 }
+.badgeEMERALD {
+    background-color: rgb(50, 182, 79);
+}
 .badgePLATINUM {
     background-color: rgb(53, 148, 177);
 }
@@ -610,6 +613,11 @@ div {
 }
 .borderDIAMOND {
     border: solid rgb(77, 111, 223) 2px;
+    border-radius: 5px;
+}
+
+.borderEMERALD {
+    border: solid rgb(50, 182, 79) 2px;
     border-radius: 5px;
 }
 .borderPLATINUM {

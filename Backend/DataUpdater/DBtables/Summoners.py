@@ -23,5 +23,5 @@ def getSummoners(engine):
         query = select(Summoners)
         for summ in conn.execute(query):
             summoners.append(summ[0])
-    return summ
+    return summoners
         
