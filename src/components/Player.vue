@@ -186,7 +186,7 @@ div {
 #badge p {
     color: black;
     background-color: transparent;
-    transform: translateY(-70%);
+    transform: translateY(-65%);
 }
 .border {
     padding: 1px;
