@@ -14,17 +14,16 @@ watcher = LolWatcher(api_key)
 
 # -----------------------------------------------------------------------------
 def addPlayer(name):
-    print("trying to add")
-    summoner = watcher.summoner.by_name("euw1", name)
-    print("after summoner")
-    print("summoner basic", name, summoner["profileIconId"])
+    try:
+        summoner = watcher.summoner.by_name("euw1", name)
+    except Exception as e:
+        print(f"[ERROR] -> [{datetime.today()}]  -  {e} at addPlayer")
+        
 
     setSummonerBasic(name, profileIconId=summoner["profileIconId"], level=summoner["summonerLevel"])
-    print("summoner dev", name, summoner["accountId"], summoner["id"], summoner["puuid"])
 
     setSummonerDev(name, accountId=summoner["accountId"], id=summoner["id"], puuid=summoner["puuid"])
 
-    print("after adding")
 
 
 
@@ -33,7 +32,10 @@ def addPlayer(name):
 def updateSummonerStats(name):
     summoner_id = getSummonerDev(name)["id"]
 
-    both_rankeds = watcher.league.by_summoner("euw1", summoner_id)
+    try:
+        both_rankeds = watcher.league.by_summoner("euw1", summoner_id)
+    except Exception as e:
+        print(f"[ERROR] -> [{datetime.today()}]  -  {e} at updateSummonerStats")
 
     riot_LP_solo = {}
     riot_LP_flex = {}
@@ -127,5 +129,6 @@ if __name__ == "__main__":
     try:
         setStatus(True)
         main()
-    except:
+    except Exception as e:
+        print(f"[ERROR] -> [{datetime.today()}]  -  {e}")
         setStatus(False)
