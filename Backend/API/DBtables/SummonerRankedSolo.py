@@ -22,7 +22,6 @@ class SummonerRankedSolo(Base):
     losses: Mapped[int] = mapped_column(Integer)
     hotStreak: Mapped[bool] = mapped_column(Boolean)
     LP: Mapped[int] = mapped_column(Integer)
-    rankedRank: Mapped[int] = mapped_column(Integer)
     
 
 
@@ -38,7 +37,6 @@ def getSummonerRankedSolo(engine, name: str):
                 "losses": data[4],
                 "hotStreak": data[5],
                 "LP": data[6],
-                "rankedRank": data[7]
             }
     return None
 

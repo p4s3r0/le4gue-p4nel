@@ -21,7 +21,6 @@ def addPlayer(name):
         
 
     setSummonerBasic(name, profileIconId=summoner["profileIconId"], level=summoner["summonerLevel"])
-
     setSummonerDev(name, accountId=summoner["accountId"], id=summoner["id"], puuid=summoner["puuid"])
 
 
@@ -86,8 +85,9 @@ def calcRankedPlace(new_rank):
         "SILVER": 3,
         "GOLD": 4,
         "PLATINUM": 5,
-        "DIAMOND": 6,
-        "MASTER": 7
+        "EMERALD": 6,
+        "DIAMOND": 7,
+        "MASTER": 8
     }
 
     rank = {
